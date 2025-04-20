@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: frontend
 spec:
-  replicas: 1
+  replicas: 3  # Three replicas
   selector:
     matchLabels:
       app: frontend
@@ -15,6 +15,6 @@ spec:
       containers:
       - name: frontend
         image: frontend
-        imagePullPolicy: Never
+        imagePullPolicy: Never  # For local Minikube
         ports:
         - containerPort: 80

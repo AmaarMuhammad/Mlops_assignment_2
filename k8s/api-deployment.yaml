@@ -15,5 +15,6 @@ spec:
       containers:
       - name: api-service
         image: api-service
+        imagePullPolicy: Never
         ports:
         - containerPort: 3001
